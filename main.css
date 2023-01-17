@@ -1,7 +1,16 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap");
+
 /* Default styles */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  /* Variables */
+  --color-white: #fff;
+  --color-light-grey: #f8f9fb;
+  --color-dark-blue: #103b66;
+  --color-sky-blue: #21b8f9;
 }
 
 *,
@@ -10,4 +19,69 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100vw;
+  background-color: var(--color-light-grey);
+  color: var(--color-dark-blue);
+}
+
+.container {
+  max-width: 92.2rem;
+}
+
+/* Header */
+.header {
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+
+.header__link--digest {
+  font-weight: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.header__link--digest::after {
+  content: "2";
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+  color: var(--color-white);
+  border-radius: 50%;
+  font-weight: 500;
+  font-family: "Noto Sans HK", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

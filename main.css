@@ -12,6 +12,7 @@ html {
   --color-border: #0a254052;
   --color-dark-blue: #103b66;
   --color-sky-blue: #21b8f9;
+  --color-dark-grey: #7D8A99;
 }
 
 *,
@@ -40,6 +41,7 @@ body {
   width: 100vw;
   background-color: var(--color-light-grey);
   color: var(--color-dark-blue);
+  overflow-x: hidden;
 }
 
 .container {
@@ -131,4 +133,55 @@ a.section__subtitle--link:visited {
   background-color: var(--color-white);
   border-radius: 10rem;
   border-bottom: 1px solid #e1e4fe;
+}
+
+.section-wizard {
+  width: 100%;
+  align-items: start;
+  gap: 2.4rem;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.3rem 2.9rem;
+}
+
+.grid__item {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06), 0px 2px 4px rgba(50, 50, 71, 0.06);
+  border-radius: 4px;
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.title-group {
+  display: flex;
+  align-items: center;
+  gap: 3.4rem;
+}
+
+.star-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.star-group__text {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  color: var(--color-dark-grey)
 }

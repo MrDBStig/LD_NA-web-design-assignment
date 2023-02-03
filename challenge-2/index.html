@@ -16,5 +16,48 @@
         What's new</a
       >
     </header>
+    <main class="main">
+      <nav class="navbar">
+        <div class="navbar-group">
+          <input
+            type="text"
+            class="navbar-search__input"
+            placeholder="Шукаць у прадуктах"
+          />
+          <img
+            src="./img/search-icon.svg"
+            class="navbar-search__icon"
+            alt="search icon"
+          />
+          <p class="navbar-text">Products (24 / 100)</p>
+        </div>
+        <div class="navbar-group">
+          <p class="navbar-text">Featured products (7 / 10)</p>
+          <label class="switch">
+            <input type="checkbox" name="slider" id="input-slider" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="navbar-group">
+          <select name="category" id="category-selector">
+            <option disabled selected>Select category</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="desserts">Desserts</option>
+            <option value="hot-drinks">Hot Drinks</option>
+          </select>
+          <button class="toggle-view">
+            <img src="./img//grid-icon.svg" alt="grid icon" />
+          </button>
+        </div>
+        <div class="navbar-group">
+          <button class="toggle-view">
+            <img src="./img//list-icon.svg" alt="grid icon" />
+          </button>
+          <button class="btn">&plus; Add product</button>
+        </div>
+      </nav>
+    </main>
   </body>
 </html>

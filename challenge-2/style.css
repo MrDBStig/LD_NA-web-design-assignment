@@ -13,6 +13,7 @@ html {
   --color-dark-blue: #103b66;
   --color-sky-blue: #21b8f9;
   --color-dark-grey: #7D8A99;
+  --color-grey: #546679;
 }
 
 *,
@@ -94,4 +95,129 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 2.4rem;
+  gap: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey);
+}
+
+.navbar-group {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  position: relative;
+  min-height: 4rem;
+}
+
+.navbar-group:not(:last-child) {
+  border-right: 1px solid var(--color-grey);
+  padding-right: 1.6rem;
+}
+
+.navbar-search__input {
+  padding: 1.2rem 1.2rem 1.2rem 4rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  min-width: 42.5rem;
+}
+
+.navbar-search__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.9rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B6BEC6;
+  transition: .4s;
+  border-radius: 9rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2.3rem;
+  width: 2.3rem;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-white);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: var(--color-sky-blue);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px var(--color-sky-blue);
+}
+
+input:checked+.slider:before {
+  transform: translateX(2rem);
+}
+
+#category-selector {
+  border: none;
+  background: transparent;
+  color: var(--color-grey);
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  padding: 1.7rem 2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+button.toggle-view,
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--color-sky-blue);
+  color: var(--color-white);
+  padding: 1.2rem 1.6rem;
+  gap: .8rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px #32324714, 0px 4px 8px #3232470f;
 }

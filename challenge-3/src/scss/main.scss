@@ -8,6 +8,9 @@ $default-text-dark-blue: #103b66;
 $text-sky-blue: #21b8f9;
 $color-white: #ffffff;
 $color-border: #0a254052;
+$color-grey-text: #6c7c8c;
+$color-orange-featured: #ffa26b;
+$color-green-regular: #00c48c;
 
 // Default styles
 html {
@@ -31,7 +34,6 @@ body {
   line-height: 2rem;
   background-color: $color-bg-grey;
   color: $default-text-dark-blue;
-  min-height: 100vh;
 }
 
 a:link,
@@ -45,10 +47,12 @@ a:hover {
 }
 
 .container {
+  padding: 6rem 0;
   max-width: 73rem;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 }
 
@@ -93,14 +97,189 @@ a:hover {
   }
 }
 
+// Main
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: calc(100vh - 6.5rem);
 
   &-group {
     display: flex;
     gap: 3rem;
+
+    &__item {
+      background-color: $color-white;
+      padding: 2.4rem;
+      border-radius: 1rem;
+      box-shadow: 0px 4px 4px #32324714, 0px 4px 8px #3232470f;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+
+          h3 {
+            font-size: 2.2rem;
+            line-height: 2.7rem;
+          }
+        }
+
+        select {
+          border: none;
+          background: transparent;
+          color: $color-grey-text;
+          font-family: inherit;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+        }
+      }
+
+      &__count {
+        font-weight: 600;
+        font-size: 4.2rem;
+        line-height: 5.3rem;
+        height: 7.9rem;
+
+        display: flex;
+        align-items: center;
+      }
+
+      &__link {
+        font-size: 1.7rem;
+        line-height: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        max-width: 30rem;
+
+        &:link,
+        &:visited {
+          color: $text-sky-blue;
+          text-decoration: underline;
+        }
+      }
+
+      &__stats {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        font-size: 1.7rem;
+        line-height: 2rem;
+
+        .stats-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            color: $color-grey-text;
+          }
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+
+      &__products {
+        display: flex;
+        gap: 2.4rem;
+
+        .extension {
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+
+          figure {
+            width: 15rem;
+            height: 15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 1rem;
+
+            &.featured {
+              background-color: $color-orange-featured;
+            }
+
+            &.regular {
+              background-color: $color-green-regular;
+              color: $color-white;
+              display: flex;
+              flex-direction: column;
+
+              .amount {
+                font-weight: 600;
+                font-size: 3.4rem;
+                line-height: 3.9rem;
+              }
+
+              .products {
+                font-family: "Noto Sans HK", sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 2.5rem;
+              }
+            }
+          }
+
+          figcaption {
+            max-width: 15rem;
+          }
+        }
+      }
+
+      &__grid-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.1rem;
+
+        article {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+
+          .article-info {
+            padding: 1rem 0.6rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &__category {
+              color: $text-sky-blue;
+              font-size: 1.2rem;
+              line-height: 1.6rem;
+            }
+
+            &__text {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              span {
+                font-weight: 300;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                -webkit-text-decoration-line: underline;
+                text-decoration-line: underline;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
